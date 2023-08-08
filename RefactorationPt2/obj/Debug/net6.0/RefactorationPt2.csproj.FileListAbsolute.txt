@@ -1,0 +1,15 @@
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\bin\Debug\net6.0\RefactorationPt2.exe
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\bin\Debug\net6.0\RefactorationPt2.deps.json
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\bin\Debug\net6.0\RefactorationPt2.runtimeconfig.json
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\bin\Debug\net6.0\RefactorationPt2.dll
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\bin\Debug\net6.0\RefactorationPt2.pdb
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.csproj.AssemblyReference.cache
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.AssemblyInfoInputs.cache
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.AssemblyInfo.cs
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.dll
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\refint\RefactorationPt2.dll
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.pdb
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.genruntimeconfig.cache
+C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\ref\RefactorationPt2.dll

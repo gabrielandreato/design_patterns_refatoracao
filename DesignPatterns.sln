@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns2", "DesignPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactorationPt2", "RefactorationPt2\RefactorationPt2.csproj", "{9257C8E9-84D8-471B-A4C6-350F2E882597}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactorationPt3", "RefactorationPt3\RefactorationPt3.csproj", "{83BA820E-A9A2-402E-8216-FC8E97230E02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{9257C8E9-84D8-471B-A4C6-350F2E882597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9257C8E9-84D8-471B-A4C6-350F2E882597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9257C8E9-84D8-471B-A4C6-350F2E882597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BA820E-A9A2-402E-8216-FC8E97230E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BA820E-A9A2-402E-8216-FC8E97230E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BA820E-A9A2-402E-8216-FC8E97230E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BA820E-A9A2-402E-8216-FC8E97230E02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
