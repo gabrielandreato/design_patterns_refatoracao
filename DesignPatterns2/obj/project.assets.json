@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gabriel.andreato\\.nuget\\packages\\": {}
+    "C:\\Users\\usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabriel.andreato\\RiderProjects\\Alura\\DesignPatterns\\DesignPatterns2\\DesignPatterns2.csproj",
+      "projectUniqueName": "C:\\Dev\\estudo\\CSharp\\design_patterns_refatoracao\\DesignPatterns2\\DesignPatterns2.csproj",
       "projectName": "DesignPatterns2",
-      "projectPath": "C:\\Users\\gabriel.andreato\\RiderProjects\\Alura\\DesignPatterns\\DesignPatterns2\\DesignPatterns2.csproj",
-      "packagesPath": "C:\\Users\\gabriel.andreato\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabriel.andreato\\RiderProjects\\Alura\\DesignPatterns\\DesignPatterns2\\obj\\",
+      "projectPath": "C:\\Dev\\estudo\\CSharp\\design_patterns_refatoracao\\DesignPatterns2\\DesignPatterns2.csproj",
+      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\estudo\\CSharp\\design_patterns_refatoracao\\DesignPatterns2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gabriel.andreato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

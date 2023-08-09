@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K90FZE6rrKyovWrEC+ag+DAnsa91H5S9BQZQ2NJMhxxbpH0fO7a2kC7xqiuS9wBGIVGw3+Y6ZH++VCPfsOxovg==",
+  "dgSpecHash": "2/vwEhoTsOfGkglLKKcYo5mZW3TWkAlgkSXNQrX1hC8C6LqRBiAj/bP9mfivZ3HlOifZtWfKa53ug39qsS0q3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabriel.andreato\\RiderProjects\\Alura\\DesignPatterns\\RefactorationPt2\\RefactorationPt2.csproj",
+  "projectFilePath": "C:\\Dev\\estudo\\CSharp\\design_patterns_refatoracao\\RefactorationPt2\\RefactorationPt2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

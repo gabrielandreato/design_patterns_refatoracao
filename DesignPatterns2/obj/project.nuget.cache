@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6S6ozNgPzQYqUluI+9FoMCrcCKxrXSH4XirezCYJme5k0FtreNdRSx0+OKtoYpcL692Z/w4CtPC78D6QrtYowA==",
+  "dgSpecHash": "XHsXK4Gd7lu+IYuS2Oj/9pW/TSWTyxqRz2/Q4q7gxiCfvTeYvrqG01XfuGl86eT7oss1blfeCX6e0EXB6QDgMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabriel.andreato\\RiderProjects\\Alura\\DesignPatterns\\DesignPatterns2\\DesignPatterns2.csproj",
+  "projectFilePath": "C:\\Dev\\estudo\\CSharp\\design_patterns_refatoracao\\DesignPatterns2\\DesignPatterns2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

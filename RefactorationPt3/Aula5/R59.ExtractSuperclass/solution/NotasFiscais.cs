@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
+using RefactorationPt3.Aula1;
 
-namespace refatoracao.Parte3.Aula5.R59.ExtractSuperclass.depois
+namespace RefactorationPt3.Aula5.R59.ExtractSuperclass.solution
 {
-    class Programa
+    class ExtractSuperclass: IRefactoration
     {
-        void Teste()
+        public  void Execute()
         {
             var item1 = new Item(new Produto("Escova dental Dentinho Feliz", 15), 15, 3);
             var item2 = new Item(new Produto("Sabonete Flor da Manhã", 3), 3, 10);
@@ -58,25 +55,28 @@ namespace refatoracao.Parte3.Aula5.R59.ExtractSuperclass.depois
         }
     }
 
-    abstract class BasePedido
-    {
-        protected string nomeCliente;
+    class BasePedido {
+        readonly string nomeCliente;
         public string NomeCliente => nomeCliente;
 
-        protected string enderecoEntrega;
+        readonly string enderecoEntrega;
         public string EnderecoEntrega => enderecoEntrega;
 
         protected readonly List<Item> itens = new List<Item>();
         internal IReadOnlyCollection<Item> Itens => new ReadOnlyCollection<Item>(itens);
 
-        public decimal ValorDosItens()
-        {
-            return itens.Sum(i => i.Total);
+        public BasePedido(string nomeCliente, string enderecoEntrega) {
+            this.nomeCliente = nomeCliente;
+            this.enderecoEntrega = enderecoEntrega;
         }
     }
 
-    class Pedido : BasePedido
+    class Pedido: BasePedido
     {
+        public Pedido(string nomeCliente, string enderecoEntrega)
+            : base(nomeCliente, enderecoEntrega) {
+            
+        }
         void Add(Item item)
         {
             itens.Add(item);
@@ -87,18 +87,24 @@ namespace refatoracao.Parte3.Aula5.R59.ExtractSuperclass.depois
             itens.Add(item);
         }
 
-        public Pedido(string nomeCliente, string enderecoEntrega)
+        public decimal ValorDosItens()
         {
-            this.nomeCliente = nomeCliente;
-            this.enderecoEntrega = enderecoEntrega;
+            return itens.Sum(i => i.Total);
         }
     }
 
-    class NotaFiscal : BasePedido
+    class NotaFiscal: BasePedido
     {
+        
         public NotaFiscal(Pedido pedido)
+        : base(pedido.NomeCliente, pedido.EnderecoEntrega)
         {
             this.itens.AddRange(pedido.Itens);
+        }
+
+        public decimal ValorDosItens()
+        {
+            return itens.Sum(i => i.Total);
         }
 
         public decimal ValorDosImpostos()

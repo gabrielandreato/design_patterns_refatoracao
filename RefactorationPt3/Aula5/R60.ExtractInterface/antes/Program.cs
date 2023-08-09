@@ -1,9 +1,9 @@
-﻿using refatoracao.R60.ExtractInterface.depois;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RefactorationPt3.Aula5.R60.ExtractInterface.solution;
 
 namespace Refactoring3.Aula5.R60.ExtractInterface.antes
 {

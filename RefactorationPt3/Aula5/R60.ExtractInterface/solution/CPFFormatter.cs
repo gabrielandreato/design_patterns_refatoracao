@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
+using refatoracao.R60.ExtractInterface.depois;
 
-namespace refatoracao.R60.ExtractInterface.depois
+namespace RefactorationPt3.Aula5.R60.ExtractInterface.solution
 {
-    public class CNPJFormatter : IFormatter
+    public class CPFFormatter : IFormatter
     {
         protected readonly string formatted;
         protected readonly string formattedReplacement;
         protected readonly string unformatted;
         protected readonly string unformattedReplacement;
 
-        public CNPJFormatter()
-            : this(@"(\d{2})[.](\d{3})[.](\d{3})\/(\d{4})-(\d{2})", "$1.$2.$3/$4-$5", @"(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})", "$1$2$3$4$5")
+        public CPFFormatter()
+            : this(@"(\d{3})[.](\d{3})[.](\d{3})-(\d{2})", "$1.$2.$3-$4"
+                  , @"(\d{3})(\d{3})(\d{3})(\d{2})", "$1$2$3$4")
         {
         }
 
-        public CNPJFormatter(string formatted, String formattedReplacement, string unformatted, String unformattedReplacement)
+        public CPFFormatter(string formatted, String formattedReplacement, string unformatted, String unformattedReplacement)
         {
             this.formatted = formatted;
             this.formattedReplacement = formattedReplacement;
