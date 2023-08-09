@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RefactorationPt3.Aula1;
 
-namespace refatoracao.R54.PullUpMethod.depois
+namespace RefactorationPt3.Aula4.R55.PullUpConstructorBody.solution
 {
-    class Programa
+    class PullUpConstructorBody: IRefactoration
     {
-        void Main()
+        public void Execute()
         {
             var cliente1 = new PessoaJuridica("Alura Cursos Online S/A", "Rua XPTO", "123", "12345678/0001-22");
             var cliente2 = new PessoaFisica("João Snow", "Rua das Flores", "987", "123456789-12");
@@ -14,7 +12,6 @@ namespace refatoracao.R54.PullUpMethod.depois
 
             Console.WriteLine("Clientes");
             Console.WriteLine("========");
-
             foreach (var cliente in clientes)
             {
                 Console.WriteLine($"{cliente.Nome}");
@@ -26,19 +23,18 @@ namespace refatoracao.R54.PullUpMethod.depois
 
     abstract class Cliente
     {
-        private readonly string nome;
+        protected string nome;
         public string Nome => nome;
 
-        protected readonly string logradouro;
-        protected readonly string numero;
+        protected string logradouro;
+        protected string numero;
 
-        public Cliente(string nome, string logradouro, string numero)
-        {
+        public Cliente(string nome, string logradouro, string numero) {
             this.nome = nome;
             this.logradouro = logradouro;
             this.numero = numero;
         }
-
+        
         public string GetEndereco()
         {
             return $"{logradouro} {numero}";
@@ -62,7 +58,7 @@ namespace refatoracao.R54.PullUpMethod.depois
         private readonly string cnpj;
         public string Cnpj => cnpj;
 
-        public PessoaJuridica(string nome, string logradouro, string numero, string cnpj)
+        public PessoaJuridica(string nome, string logradouro, string numero, string cnpj) 
             : base(nome, logradouro, numero)
         {
             this.cnpj = cnpj;

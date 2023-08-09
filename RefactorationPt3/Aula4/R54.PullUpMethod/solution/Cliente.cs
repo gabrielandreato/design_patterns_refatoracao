@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RefactorationPt3.Aula1;
 
-namespace refatoracao.R55.PullUpConstructorBody.depois
+namespace RefactorationPt3.Aula4.R54.PullUpMethod.solution
 {
-    class Programa
+    class PullUpMethod: IRefactoration
     {
-        void Main()
+        public void Execute()
         {
             var cliente1 = new PessoaJuridica("Alura Cursos Online S/A", "Rua XPTO", "123", "12345678/0001-22");
             var cliente2 = new PessoaFisica("João Snow", "Rua das Flores", "987", "123456789-12");
@@ -14,22 +12,23 @@ namespace refatoracao.R55.PullUpConstructorBody.depois
 
             Console.WriteLine("Clientes");
             Console.WriteLine("========");
-            foreach (var cliente in clientes)
-            {
+
+            foreach (var cliente in clientes) {
                 Console.WriteLine($"{cliente.Nome}");
                 Console.WriteLine($"{cliente.GetEndereco()}");
                 Console.WriteLine("========");
             }
+            
         }
     }
 
     abstract class Cliente
     {
-        protected string nome;
+        private readonly string nome;
         public string Nome => nome;
 
-        protected string logradouro;
-        protected string numero;
+        protected readonly string logradouro;
+        protected readonly string numero;
 
         public Cliente(string nome, string logradouro, string numero)
         {
@@ -37,7 +36,6 @@ namespace refatoracao.R55.PullUpConstructorBody.depois
             this.logradouro = logradouro;
             this.numero = numero;
         }
-
         public string GetEndereco()
         {
             return $"{logradouro} {numero}";
@@ -54,6 +52,7 @@ namespace refatoracao.R55.PullUpConstructorBody.depois
         {
             this.cpf = cpf;
         }
+        
     }
 
     class PessoaJuridica : Cliente
@@ -61,11 +60,13 @@ namespace refatoracao.R55.PullUpConstructorBody.depois
         private readonly string cnpj;
         public string Cnpj => cnpj;
 
-        public PessoaJuridica(string nome, string logradouro, string numero, string cnpj)
+        public PessoaJuridica(string nome, string logradouro, string numero, string cnpj) 
             : base(nome, logradouro, numero)
         {
             this.cnpj = cnpj;
         }
+
+
     }
 
 }

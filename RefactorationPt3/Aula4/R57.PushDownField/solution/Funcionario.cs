@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RefactorationPt3.Aula1;
 
-namespace refatoracao.R56.PushDownMethod.depois
+namespace RefactorationPt3.Aula4.R57.PushDownField.solution
 {
-    class Programa
+    class PushDownField:IRefactoration  
     {
-        void Main()
+        public void Execute()
         {
             Funcionario engenheiro = Funcionario.CriarFuncionario(Funcionario.TipoFuncionario.Engenheiro, "José da Silva", 1000);
             Funcionario vendedor = Funcionario.CriarFuncionario(Funcionario.TipoFuncionario.Vendedor, "Maria Bonita", 2000);
@@ -19,7 +17,7 @@ namespace refatoracao.R56.PushDownMethod.depois
         }
     }
 
-    abstract class Funcionario
+    class Funcionario
     {
         public enum TipoFuncionario
         {
@@ -36,12 +34,6 @@ namespace refatoracao.R56.PushDownMethod.depois
 
         protected decimal salario;
         public decimal Salario => salario;
-
-        protected decimal comissao;
-        public decimal Comissao => comissao;
-
-        protected decimal bonus;
-        public decimal Bonus => bonus;
 
         protected Funcionario(string nome, decimal salario)
         {
@@ -63,7 +55,6 @@ namespace refatoracao.R56.PushDownMethod.depois
                     throw new ArgumentException("Tipo de funcionário inválido");
             }
         }
-
     }
 
     class Engenheiro : Funcionario
@@ -76,6 +67,8 @@ namespace refatoracao.R56.PushDownMethod.depois
 
     class Vendedor : Funcionario
     {
+        private decimal comissao;
+        public decimal Comissao => comissao;
         public Vendedor(string nome, decimal salario) : base(nome, salario)
         {
             this.tipo = TipoFuncionario.Vendedor;
@@ -95,11 +88,12 @@ namespace refatoracao.R56.PushDownMethod.depois
 
             this.comissao = comissao;
         }
-
     }
 
     class Gerente : Funcionario
     {
+        private decimal bonus;
+        public decimal Bonus => bonus;
         public Gerente(string nome, decimal salario) : base(nome, salario)
         {
             this.tipo = TipoFuncionario.Gerente;
