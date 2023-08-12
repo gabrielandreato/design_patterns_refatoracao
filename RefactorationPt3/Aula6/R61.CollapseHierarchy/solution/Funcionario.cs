@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RefactorationPt3.Aula1;
 
-namespace refatoracao.R61.CollapseHierarchy.depois
+namespace RefactorationPt3.Aula6.R61.CollapseHierarchy.solution
 {
-    class Programa
+    class CollapseHierarchy: IRefactoration
     {
-        void Main()
+        public void Execute()
         {
-            var funcionario = new Funcionario("Walter White", "555-12345", "666-65432");
+            var empregado = new Funcionario("Walter White", "555-12345", "666-65432");
+            Console.WriteLine(empregado);
         }
     }
 
@@ -17,7 +16,6 @@ namespace refatoracao.R61.CollapseHierarchy.depois
         public string Nome { get; set; }
         public string TelefoneFixo { get; set; }
         public string Celular { get; set; }
-        public string CodigoFuncional { get; set; }
 
         public Funcionario(string nome, string telefoneFixo, string celular)
         {

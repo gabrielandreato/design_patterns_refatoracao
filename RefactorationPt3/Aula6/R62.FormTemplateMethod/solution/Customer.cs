@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
+using RefactorationPt3.Aula1;
 
-namespace refatoracao.R62.FormTemplateMethod.depois
+namespace RefactorationPt3.Aula6.R62.FormTemplateMethod.solution
 {
-    class Program
+    class FormTemplateMethod: IRefactoration
     {
-        void Main()
+        public void Execute()
         {
             var cliente = new Cliente();
 
             //....
             //....
             //....
-            
+
             var resumo = new Resumo(cliente).GetResumo();
             var resumoHTML = new ResumoHTML(cliente).GetResumo();
+            Console.WriteLine(resumo);
+            Console.WriteLine(resumoHTML);
         }
     }
 
@@ -50,17 +51,14 @@ namespace refatoracao.R62.FormTemplateMethod.depois
         }
     }
 
-    abstract class BaseResumo
-    {
-        protected readonly Cliente cliente;
+    abstract class BaseResumo {
+        protected Cliente cliente;
 
-        public BaseResumo(Cliente cliente)
-        {
+        public BaseResumo(Cliente cliente) {
             this.cliente = cliente;
         }
 
-        public string GetResumo()
-        {
+        public string GetResumo() {
             var resultado = new StringBuilder();
             resultado.AppendLine(GetTitulo());
             foreach (var locacao in cliente.Locacoes)
@@ -73,64 +71,56 @@ namespace refatoracao.R62.FormTemplateMethod.depois
         }
 
         protected abstract string GetPontos();
-
         protected abstract string GetDebitos();
-
         protected abstract string GetDetalhe(Locacao locacao);
-
         protected abstract string GetTitulo();
     }
 
-    internal class ResumoHTML : BaseResumo
+
+    internal class ResumoHTML: BaseResumo
     {
-        public ResumoHTML(Cliente cliente) : base(cliente)
+        public ResumoHTML(Cliente cliente): base(cliente)
         {
+            this.cliente = cliente;
         }
-
-        protected override string GetDebitos()
-        {
-            return "<p> Você deve: <em>R$ " + cliente.ValorTotal.ToString() + "</em></p>";
-        }
-
-        protected override string GetDetalhe(Locacao locacao)
-        {
-            return locacao.Filme.Titulo + "<br/>";
-        }
-
-        protected override string GetPontos()
-        {
+        
+        protected override string GetPontos() {
             return "Você ganhou: " + cliente.PontosDeFidelidade.ToString() + "</em> pontos.";
         }
 
-        protected override string GetTitulo()
-        {
+        protected override string GetDebitos() {
+            return "<p> Você deve: <em>R$ " + cliente.ValorTotal.ToString() + "</em></p>";
+        }
+
+        protected override string GetDetalhe(Locacao locacao) {
+            return locacao.Filme.Titulo + "<br/>";
+        }
+
+        protected override string GetTitulo() {
             return "<h1>Locações de <em>" + cliente.Nome + "</em></h1>";
         }
     }
 
-    internal class Resumo : BaseResumo
+    internal class Resumo: BaseResumo
     {
-        public Resumo(Cliente cliente) : base(cliente)
+        public Resumo(Cliente cliente): base(cliente)
         {
+            this.cliente = cliente;
         }
 
-        protected override string GetDebitos()
-        {
-            return "Total devido: " + cliente.ValorTotal.ToString();
-        }
-
-        protected override string GetDetalhe(Locacao locacao)
-        {
-            return "\t" + locacao.Filme.Titulo;
-        }
-
-        protected override string GetPontos()
-        {
+        protected override string GetPontos() {
             return $"Você ganhou: {cliente.PontosDeFidelidade.ToString()} pontos";
         }
 
-        protected override string GetTitulo()
-        {
+        protected override string GetDebitos() {
+            return "Total devido: " + cliente.ValorTotal;
+        }
+
+        protected override string GetDetalhe(Locacao locacao) {
+            return "\t" + locacao.Filme.Titulo;
+        }
+
+        protected override string GetTitulo() {
             return "Resumo de locações de " + cliente.Nome;
         }
     }

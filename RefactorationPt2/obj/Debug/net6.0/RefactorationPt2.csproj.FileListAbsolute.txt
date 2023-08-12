@@ -13,3 +13,11 @@ C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\ob
 C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.pdb
 C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.genruntimeconfig.cache
 C:\Users\gabriel.andreato\RiderProjects\Alura\DesignPatterns\RefactorationPt2\obj\Debug\net6.0\ref\RefactorationPt2.dll
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.csproj.AssemblyReference.cache
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.AssemblyInfoInputs.cache
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.AssemblyInfo.cs
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.csproj.CoreCompileInputs.cache
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.dll
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\refint\RefactorationPt2.dll
+C:\Dev\estudo\CSharp\design_patterns_refatoracao\RefactorationPt2\obj\Debug\net6.0\RefactorationPt2.pdb

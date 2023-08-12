@@ -12,19 +12,24 @@ using RefactorationPt3.Aula3.R50.HideMethod.solution;
 using RefactorationPt3.Aula3.R51.ReplaceConstructorWithFactoryMethod.solution;
 using RefactorationPt3.Aula3.R52.ReplaceErrorCodeWithException.solution;
 using RefactorationPt3.Aula3.R53.ReplaceExceptionwithTest.solution;
+using RefactorationPt3.Aula6.R61.CollapseHierarchy.solution;
+using RefactorationPt3.Aula6.R62.FormTemplateMethod.solution;
 
 var listRefactoration = new List<IRefactoration>() {
-    new RenamingMethodCredito(),
-    new PricesCalculatorIncludingParameter(),
-    new CalculadoraDePrecoRemovingParameter(),
-    new ClienteSeparateQueryFromModifier(),
-    new ParameterizeMethod(),
-    new ReplaceParameterWithExplicitMethods(),
-    new PreserveWholeObject(),
-    new HideMethod(),
-    new ReplaceConstructorWithFactoryMethod(), 
-    new ReplaceErrorCodeWithException(),
-    new ReplaceExceptionWithTest()
+    // new RenamingMethodCredito(),
+    // new PricesCalculatorIncludingParameter(),
+    // new CalculadoraDePrecoRemovingParameter(),
+    // new ClienteSeparateQueryFromModifier(),
+    // new ParameterizeMethod(),
+    // new ReplaceParameterWithExplicitMethods(),
+    // new PreserveWholeObject(),
+    // new HideMethod(),
+    // new ReplaceConstructorWithFactoryMethod(), 
+    // new ReplaceErrorCodeWithException(),
+    // new ReplaceExceptionWithTest(),
+    // new CollapseHierarchy(),
+    new FormTemplateMethod()
+    
 };
 
 foreach (var refactoration in listRefactoration) {
